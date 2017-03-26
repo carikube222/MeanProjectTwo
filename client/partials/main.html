@@ -1,32 +1,38 @@
+<br>
+<h4 class='pull-left'>
+  <a href="#!/surveys/new" style='color:#20B2AA'><i class="fa fa-plus fa-lg" aria-hidden="true"></i> Create a new Poll </a>&nbsp;&nbsp;
+  <a href="/#!/logout" style='color:orange'><i class="fa fa-sign-out fa-lg" aria-hidden="true"></i> Logout</a>
+</h4>
+<br><br><br>
 <div class="row">
-  <div class="col-md-6"></div>
   <div class="col-md-8">
-    <a href="#!/surveys/new">Create a new Poll</a> | <a href="/#!/logout">Bye <i class="fa fa-sign-out fa-2x" aria-hidden="true"></i></a>
+    <h3>Current Polls</h3>
+    <h5 class='pull-right'>Search:  <input type="text" ng-model="search" placeholder="Search Here"></h5>
   </div>
 </div>
-<p class='pull-right'>Search:  <input type="text" ng-model="search" placeholder="Search Polls"></p>
-<!-- <input class="searchBox" type="text" ng-model="search" placeholder="Search Polls"> -->
-<h3>Current Polls</h3>
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Survey Question</th>
-      <th>Date posted</th>
-      <th>Action<th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr ng-repeat='survey in surveys | orderBy: "-date" | filter: search'>
-      <td>{{survey.name}}</td>
-      <td><a href="#!/surveys/{{survey._id}}/show">{{survey.question}}</a></td>
-      <td ng-bind='survey.date | date: "longDate"'></td>
-      <td>
-          <a class='btn btn-default' ng-if='survey.name == currentUser' ng-click='delete(survey)'>Delete</a>
-      </td>
-    </tr>
-  </tbody>
-  </table>
-
-  <!-- the error messages -->
-  <!-- <h5 style='color:red' ng-bind='hasErrors'></h5> -->
+<div class="row">
+  <div class="col-md-8">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Survey Question</th>
+          <th>Date posted</th>
+          <th>Action<th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat='survey in surveys | orderBy: "-date" | filter: search'>
+          <td><h5>{{survey.name}}</h5></td>
+          <td><a href="#!/surveys/{{survey._id}}/show"><h5>"{{survey.question}}"</a></h5></td>
+          <td ng-bind='survey.date | date: "longDate"'></td>
+          <td>
+              <a class='btn btn-danger' ng-if='survey.name == currentUser' ng-click='delete(survey)'><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-md-4">
+  </div>
+</div>

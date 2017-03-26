@@ -1,7 +1,7 @@
-//***********************************************************************
-//**************************** Chang Names!!!!! *************************
+//******************************************************************************
+//**************************** Chang Names!!!!! ********************************
 console.log("models/survey.js")
-//***********************************************************************
+//******************************************************************************
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
@@ -20,14 +20,3 @@ var SurveySchema = new mongoose.Schema({
 });
 
 mongoose.model('Survey', SurveySchema);
-
-// _user: {type: Schema.Types.ObjectId, ref: 'User'},
-// text: {type: String, required: [true, "question required"], minlength: [15, 'question must be at least 15 characters long']},
-
-//   _user: {type: Schema.Types.ObjectId, ref: 'User'},
-//   _comment:{type: Schema.Types.ObjectId, ref: 'Comment'},
-
-//   comments: [{type:mongoose.Schema.Types.ObjectId,ref:'Comment'}],
-//    {type:Number, default:0, required: true},
-//   {type:Number, default:0, required: true},
-// }, {timestamps: true });

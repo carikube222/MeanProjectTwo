@@ -7,7 +7,6 @@ app.controller('loginController', function($scope, $location, surveysFactory) {
     console.log("Here?")
     $scope.addUser = function(){
       console.log("howabouthere?")
-      console.log($scope.newUser)
       $scope.currentUser = $scope.newUser;
       console.log($scope.currentUser);
       surveysFactory.setcurrentUser($scope.currentUser);

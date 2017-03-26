@@ -1,27 +1,27 @@
+<br><br>
 <h3>Put the question and options here:</h3>
 <br>
+<h5 ng-repeat='message in haserrors'>
+  <p style='color:red' ng-bind='message'></p>
+</h5>
 
 <div class="row">
-  <div class="col-md-8"></div>
-  <div class="col-md-4">
-    <a href="#!/surveys" class='btn btn-default pull-right'>Cancel</a>
+  <div class="col-md-7">
+    <a href="#!/surveys" class='btn btn-danger pull-right'>Cancel</a>
+    <br>
+    <form ng-submit="create()">
+      <h4>Question:</h4>
+      <input type='text' ng-model='newSurvey.question' class='form-control' required /><br>
+      <div class="row">
+        <div class="col-md-8">
+          <h5>Option 1: <input type='text' ng-model='newSurvey.one' class='form-control' required /></h5><br>
+          <h5>Option 2: <input type='text' ng-model='newSurvey.two' class='form-control' required /></h5><br>
+          <h5>Option 3: <input type='text' ng-model='newSurvey.three' class='form-control' required /></h5><br>
+          <h5>Option 4: <input type='text' ng-model='newSurvey.four' class='form-control' required /></h5><br>
+          <button type = "submit" class="btn btn-success"> Create Poll </button>
+        </div>
+      </div>
+    </form>
   </div>
 </div>
 <br>
-<div ng-repeat="error in errors" ng-if="errors !={}">
-  {{ error.message }}
-</div>
-
-<!-- <div ng-repeat='message in hasErrors'>
-  <p style='color:red' ng-bind='message'></p>
-</div> -->
-
-<form ng-submit="create()">
-	<h4>Question:</h4>
-	<input type='text' ng-model='newSurvey.question' class='form-control' required /><br>
-	<h5>Option 1: <input type='text' ng-model='newSurvey.one' class='form-control' required /></h5><br>
-  <h5>Option 2:<input type='text' ng-model='newSurvey.two' class='form-control' required /></h5><br>
-  <h5>Option 3:<input type='text' ng-model='newSurvey.three' class='form-control' required /></h5><br>
-  <h5>Option 4:<input type='text' ng-model='newSurvey.four' class='form-control' required /></h5><br>
-	<button type = "submit" class="btn btn-info"> Create Poll </button>
-</form>

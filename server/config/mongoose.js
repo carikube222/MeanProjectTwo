@@ -7,7 +7,7 @@ var mongoose    = require('mongoose'),
 
 //*************************** Mongoose CONNECT *********************************
 //*************************** CHANGE DB NAME!  *********************************
-mongoose.connect('mongodb://localhost/meanbelt');
+mongoose.connect('mongodb://localhost/mean');
 
 mongoose.connection.on('error', function (err) {
   console.error(`Mongoose Connection-Error:`, err);
