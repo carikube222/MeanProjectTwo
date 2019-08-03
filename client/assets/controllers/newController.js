@@ -44,16 +44,3 @@ $scope.create = function(){
 //***********************************************************************
 })
 //***********************************************************************
-
-
-
-// var question = $scope.newSurvey.question
-// var one = $scope.newSurvey.one
-// var two = $scope.newSurvey.two
-// var three = $scope.newSurvey.three
-// var four = $scope.newSurvey.four
-// var likeone = $scope.newSurvey.likeone
-// var liketwo = $scope.newSurvey.liketwo
-// var likethree = $scope.newSurvey.likethree
-// var likefour = $scope.newSurvey.likefour
-// var date = new Date()
